@@ -1,4 +1,5 @@
 const {ApolloServer, gql} = require('apollo-server');
+const port = process.env.PORT || 80
 
 
 
@@ -41,7 +42,7 @@ const resolvers = {
 }
 
 const server = new ApolloServer({typeDefs, resolvers})
-server.listen(2000).then(()=> console.log('running'))
+server.listen(port).then(()=> console.log('running'))
 
 
 //Resolvers
